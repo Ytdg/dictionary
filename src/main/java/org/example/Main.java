@@ -14,6 +14,6 @@ import org.example.ui.MainUi;
  * */
 public class Main {
     public static void main(String[] args) {
-        MainUi.init();
+        MainUi.init(new ImplBack());
     }
 }

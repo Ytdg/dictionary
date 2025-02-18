@@ -16,7 +16,7 @@ public final class ComponentsUI {
         JButton btn = new JButton();
         btn.setText(text);
 
-        btn.setBackground(Color.LIGHT_GRAY);
+        btn.setBackground(Color.WHITE);
 
         btn.setFocusPainted(false);
         btn.setBorder(new EmptyBorder(5, 10, 5, 10));
@@ -31,7 +31,7 @@ public final class ComponentsUI {
 
             @Override
             public void mouseExited(MouseEvent e) {
-                btn.setBackground(Color.LIGHT_GRAY);
+                btn.setBackground(Color.WHITE);
             }
         });
         return btn;
