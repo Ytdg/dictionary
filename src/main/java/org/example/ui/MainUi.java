@@ -80,7 +80,14 @@ public final class MainUi {
         fileChooser.setAcceptAllFileFilterUsed(false);
         fileChooser.setFileFilter(new FileNameExtensionFilter("Text files (*.txt)", "txt"));
         if (fileChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
-            api.loadData(fileChooser.getSelectedFiles());
+            Runnable threadCode = new Runnable() {
+                @Override
+                public void run() {
+                    api.loadData(fileChooser.getSelectedFiles());
+                }
+            };
+            new Thread(threadCode).start();
+
         }
     }
 
